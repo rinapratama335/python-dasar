@@ -1,21 +1,12 @@
-import time
-start_time = time.time()
+a = 10
+x = 5
+panjang = 1000
 
-print("Hello")
-print('World')
-print("Hello World")
+print("Nilai a =", a)
+print("Nilai x =", x)
+print("Nilai panjang =", panjang)
 
-print('Hallo ganteng')
-# ini adalah komentar
-a = 10  # ini juga komentar
-"""
-saya sefang membuat
-multiple komentar
-dahsyattt
-"""
-print(a)
-
-for i in range(1, 1000):
-    a = 10
-
-print("Waktu eksekusi ", time.time() - start_time, " detik")
+a = 8
+print("Nilai a =", a)
+b = a
+print("Nilai b =", b)
