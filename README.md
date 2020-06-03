@@ -1,15 +1,8 @@
-## Mengenal Tipe Data
+## Konversi Tipe Data
 
-Ada beberapa tipe data yang ada di Python, di antaranya :
+Di Python kita bisa mengubah tipe data ke bentuk tipe data yang lain.
 
-#### Tipe Data Standar
+Perlakuan khusus adalah jika kita mengkonversi dari tipe data string, di antaranya :
 
-- Tipe data angka satuan (integer)
-- Tipe data angka desimal (float) => tipe double di python tidak ada
-- Tipe data string (kumpulan karakter)
-- Tipe data biner (boolean => true atau false)
-
-#### Tipe Data Khusus
-
-- Tipe data complex (imajiner)
-- Tipe data yang diambil dari bahas C (karena python dibuat memakai bahasa C maka kita bisa memngambil type data dari bahasa C) => `c_double, c_char dan masih banyak lagi`
+- Untuk mengkonversi string ke tipe data angka (integer maupun float) maka string harus angka.
+- Untuk mengkonversi ke tipe data boolean jika string itu kosng ("") maka hasilnya akan false, tetapi jika string itu ada isinya mau isinya `False` atau `0` maka akan menjadi `True` karena string tersebut ada nilainya
