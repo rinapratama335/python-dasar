@@ -1,21 +1,31 @@
-## Membuat Program Sederhana Konversi Suhu
+## Mengenal Operasi Komparasi
 
-Tabel Rumus:
+- Operasi komparasi adalah operasi yang digunakan untuk membandingkan nilai.
+- Setiap hasil dari operasi komparasi adalah boolean
+- Operator yang dipakai di antaranya adalah >, <, >=, <=, ==, !=, is, is not
 
-1. Celcius
-   ke Reamur = (4/5) * celcius
-   ke Fahrenheit = (9/5)*celcius+32
-   ke Kelvin = celsius + 273
+Khusus untuk `is` dan `is not` digunakan untuk membandingkan dua/lebih variabel atau object. Sebelumnya `is` dan `is not` bis digunakan untuk syntax literal tetapi perkembangan python saat ini sudah tidak mendukung lagi.
 
-2. Reamur
-   ke Celcius = (5/4) _ reamur
-   ke Fahrenheit = (9/4) _ reamur + 32
-   ke Kelvin = (5/4) \* reamur + 273
+syntax literal itu seperti ini : `a == 5` => a ada nilainya (yaitu 5) dan memakan memory. sedangkan 5 adalah nilai literalnya. Nah `is` dan `is not` ini tidak bisa dipakai di kondisi sytax literal seperti ini.
 
-3. Fahrenheit
-   ke Celcius = (5/9) _ (fahrenheit-32)
-   ke Reamur = (4/9) _ (fahrenheit - 32)
+`is` dan `is not` dipakai untuk membandingkan object identity. Apa itu object identity?? Di python ketika nilai literal dismpan ke dalam memory maka dia akan memiliki `id`. Nah `id` object dari nilai literal inilah yang akan dibandingkan oleh si `is` dan `is not` tersebut.
 
-4. Kelvin
-   ke Celcius = kelvin - 273
-   ke Reamur = (4/5) \* (kelvin - 273)
+contohnya adalah :
+
+```
+a = 4
+object_a = id(a)
+object_hex_a = hex(id(a))
+b = 4
+object_b = id(b)
+object_hex_b = hex(id(b))
+hasil = object_a is object_b
+print(object_a, "is", object_b, ":", hasil)
+
+print("")
+hasil = object_hex_a is object_hex_b
+print(object_hex_a, "is", object_hex_b, ":", hasil)
+```
+
+Kode di atas menunjukkan bahwa kita membandingkan object identity dari nilai literal tersebut. Object identity ini bisa berupa `id` dan bisa juga berupa `hexadesimal` dari nilai literal tersebut.
+Jika kita memaksa untuk membadingkannya dengan nilai literal maka akan terdapat warning dari python.
