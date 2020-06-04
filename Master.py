@@ -1,75 +1,76 @@
-a = 4
-b = 2
+# NOT
+print("================ Operasi NOT ================")
+a = True
+not_a = not a
 
-# Lebih besar dari (>)
-print("=========== Lebih Besar Dari ===========")
-hasil = a > 3
-print(a, "> 3 =", hasil)
+print("Data a =", a)
+print("Not a =", not_a)
 
-hasil = b > 3
-print(b, "> 3 =", hasil)
+# OR (Jika salah satu True maka hasilnya pasti True)
+print("================ Operasi OR ================")
 
-hasil = b > 2
-print(b, "> 2 =", hasil)
+a = False
+b = False
+c = a or b
+print(a, "OR", b, "=", c)
 
-# Kurang dari (<)
-print("=========== Kurang Dari ===========")
-hasil = a < 3
-print(a, "< 3 =", hasil)
+a = True
+b = False
+c = a or b
+print(a, "OR", b, " =", c)
 
-hasil = b < 3
-print(b, "< 3 =", hasil)
+a = False
+b = True
+c = a or b
+print(a, " OR", b, "=", c)
 
-hasil = b < 2
-print(b, "< 2 =", hasil)
+a = True
+b = True
+c = a or b
+print(a, " OR", b, " =", c)
 
-# Lebih dari sama dengan (>=)
-print("=========== Lebih Dari Sama Dengan ===========")
-hasil = a >= 3
-print(a, ">= 3 =", hasil)
+# AND (Jika salah satu False maka hasilnya pasti False)
+print("================ Operasi AND ================")
 
-hasil = b >= 3
-print(b, ">= 3 =", hasil)
+a = False
+b = False
+c = a and b
+print(a, "AND", b, "=", c)
 
-hasil = b >= 2
-print(b, ">= 2 =", hasil)
+a = True
+b = False
+c = a and b
+print(a, "AND", b, " =", c)
 
-# Kurang dari sama dengan (<=)
-print("=========== Kurang Dari Sama Dengan ===========")
-hasil = a <= 3
-print(a, "<= 3 =", hasil)
+a = False
+b = True
+c = a and b
+print(a, " AND", b, "=", c)
 
-hasil = b <= 3
-print(b, "<= 3 =", hasil)
+a = True
+b = True
+c = a and b
+print(a, " AND", b, " =", c)
 
-hasil = b <= 2
-print(b, "<= 2 =", hasil)
+# XOR (Pembanding dan yang dibandingkan harus berbeda, jika sama hasilnya pasti False)
+print("================ Operasi XOR ================")
 
-# Sama dengan (==)
-print("=========== Sama Dengan ===========")
-hasil = a == 4
-print(a, "== 4 :", hasil)
-hasil = b == 4
-print(b, "== 4 :", hasil)
+a = False
+b = False
+c = a ^ b
+print(a, "XOR", b, "=", c)
 
-# Tidak sama dengan (!=)
-print("=========== Sama Dengan ===========")
-hasil = a != 4
-print(a, "!= 4 :", hasil)
-hasil = b != 4
-print(b, "!= 4 :", hasil)
+a = True
+b = False
+c = a ^ b
+print(a, "XOR", b, " =", c)
 
-# is dan is not
-print("=========== is dan is not ===========")
-a = 4  # 4 ini adalah nilai literal
-object_a = id(a)
-object_hex_a = hex(id(a))
-b = 4
-object_b = id(b)
-object_hex_b = hex(id(b))
-hasil = object_a is object_b
-print(object_a, "is", object_b, ":", hasil)
+a = False
+b = True
+c = a ^ b
+print(a, " XOR", b, "=", c)
 
-print("")
-hasil = object_hex_a is object_hex_b
-print(object_hex_a, "is", object_hex_b, ":", hasil)
+a = True
+b = True
+c = a ^ b
+print(a, " XOR", b, " =", c)
