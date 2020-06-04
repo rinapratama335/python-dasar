@@ -1,36 +1,75 @@
-print("====================== Membuat program konversi suhu ======================")
-print("\n")
+a = 4
+b = 2
 
-# print("========== Dari Celsius ==========")
-# celcius = float(input("Masukkan suhu dalam celcius : "))
-# print("Suhu : ", celcius, "derajat celcius")
+# Lebih besar dari (>)
+print("=========== Lebih Besar Dari ===========")
+hasil = a > 3
+print(a, "> 3 =", hasil)
 
-# # konversi ke reamur
-# reamur = (4 / 5) * celcius
-# print("Suhu dalam reamur : ", reamur, "derajat reamur")
+hasil = b > 3
+print(b, "> 3 =", hasil)
 
-# # konversi ke fahrenheit
-# fahrenheit = ((9 / 5) * celcius) + 32
-# print("Suhu dalam fahrenheit : ", fahrenheit, "derajat fahrenheit")
+hasil = b > 2
+print(b, "> 2 =", hasil)
 
-# # konversi ke kelvin
-# kelvin = celcius + 273
-# print("Suhu dalam kelvin : ", kelvin, "derajat kelvin")
+# Kurang dari (<)
+print("=========== Kurang Dari ===========")
+hasil = a < 3
+print(a, "< 3 =", hasil)
 
+hasil = b < 3
+print(b, "< 3 =", hasil)
 
-# print("========== Dari Fahrenheit ==========")
-# suhu_fahrenheit = float(input("Masukkan suhu dalam fahrenheit : "))
+hasil = b < 2
+print(b, "< 2 =", hasil)
 
-# print("Suhu yang kamu input :", suhu_fahrenheit, 'derajat fahrenheit')
+# Lebih dari sama dengan (>=)
+print("=========== Lebih Dari Sama Dengan ===========")
+hasil = a >= 3
+print(a, ">= 3 =", hasil)
 
-# suhu_kelvin = (((5 / 9) * suhu_fahrenheit) - 32) + 273
-# print("Suhu dalam kelvin : ", suhu_kelvin, "derajat kelvin")
+hasil = b >= 3
+print(b, ">= 3 =", hasil)
 
+hasil = b >= 2
+print(b, ">= 2 =", hasil)
 
-print("========== Dari Kelvin ==========")
-suhu_kelvin = float(input("Masukkan suhu dalam kelvin : "))
+# Kurang dari sama dengan (<=)
+print("=========== Kurang Dari Sama Dengan ===========")
+hasil = a <= 3
+print(a, "<= 3 =", hasil)
 
-print("Suhu yang kamu input :", suhu_kelvin, 'derajat kelvin')
+hasil = b <= 3
+print(b, "<= 3 =", hasil)
 
-suhu_fahrenheit = ((9 / 5) * (suhu_kelvin - 273)) + 32
-print("Suhu dalam fahrenheit : ", suhu_fahrenheit, "derajat fahrenheit")
+hasil = b <= 2
+print(b, "<= 2 =", hasil)
+
+# Sama dengan (==)
+print("=========== Sama Dengan ===========")
+hasil = a == 4
+print(a, "== 4 :", hasil)
+hasil = b == 4
+print(b, "== 4 :", hasil)
+
+# Tidak sama dengan (!=)
+print("=========== Sama Dengan ===========")
+hasil = a != 4
+print(a, "!= 4 :", hasil)
+hasil = b != 4
+print(b, "!= 4 :", hasil)
+
+# is dan is not
+print("=========== is dan is not ===========")
+a = 4  # 4 ini adalah nilai literal
+object_a = id(a)
+object_hex_a = hex(id(a))
+b = 4
+object_b = id(b)
+object_hex_b = hex(id(b))
+hasil = object_a is object_b
+print(object_a, "is", object_b, ":", hasil)
+
+print("")
+hasil = object_hex_a is object_hex_b
+print(object_hex_a, "is", object_hex_b, ":", hasil)
